@@ -8,7 +8,7 @@ setup(
     author_email='thisischipmccallahan@gmail.com',
     # Needed to actually package something
     packages=['cc1_tools'],
-    package_dir=['cc1_tools': 'src']
+    package_dir=['cc1_tools': 'src'],
     # Needed for dependencies
     install_requires=['protobuf'],
     # *strongly* suggested for sharing
