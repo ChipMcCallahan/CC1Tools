@@ -1,6 +1,6 @@
 import itertools
-from src.cc1_levelset_pb2 import CC1TileCode, TileSpec
-from src import CC1TileCodes
+from .cc1_levelset_pb2 import CC1TileCode, TileSpec
+from . import CC1TileCodes
 
 
 # Utils for CC1TileSpec proto

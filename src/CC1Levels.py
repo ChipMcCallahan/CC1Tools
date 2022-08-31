@@ -1,5 +1,5 @@
-from src.cc1_levelset_pb2 import CC1TileCode, TileSpec
-from src import CC1TileCodes, CC1TileSpecs
+from .cc1_levelset_pb2 import CC1TileCode, TileSpec
+from . import CC1TileCodes, CC1TileSpecs
 
 
 def add(level, pos, tcode):
