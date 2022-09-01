@@ -21,14 +21,14 @@ def is_invalid(tspec):
 
 
 def add(tspec, tcode):
-    is_entity = tcode in CC1TileCodes.MOBS
-    entity_here = tspec.top in CC1TileCodes.MOBS
-    if is_entity:
-        if not entity_here:
+    is_mob = tcode in CC1TileCodes.MOBS
+    mob_here = tspec.top in CC1TileCodes.MOBS
+    if is_mob:
+        if not mob_here:
             tspec.bottom = tspec.top
         tspec.top = tcode
     else:
-        if entity_here:
+        if mob_here:
             tspec.bottom = tcode
         else:
             tspec.top = tcode
