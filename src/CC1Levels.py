@@ -33,7 +33,7 @@ def remove(level, pos, tcodes, *, keep_cloned_mobs=False):
             if tcode in CC1TileCodes.MONSTERS and pos in level.movement:
                 level.movement.remove(pos)
             elif tcode == CC1TileCode.CLONER:
-                if not keep_cloned_mobs and tspec.top in CC1TileCodes.ENTITIES:
+                if not keep_cloned_mobs and tspec.top in CC1TileCodes.MOBS:
                     CC1TileSpecs.remove(tspec, tspec.top)
             update_controls(level, pos, tcode)
     return removed
