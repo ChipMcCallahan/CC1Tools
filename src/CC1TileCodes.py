@@ -35,8 +35,8 @@ BLOBS = frozenset(
     CC1TileCode.Value(s) for s in tuple(f"BLOB_{d}" for d in "NESW"))
 MONSTERS = frozenset().union(ANTS, PARAMECIA, GLIDERS, FIREBALLS, TANKS, BALLS,
                              WALKERS, TEETH, BLOBS)
-ENTITIES = frozenset().union(MONSTERS, BLOCKS, PLAYERS)
-NONENTITIES = ALL.difference(ENTITIES)
+MOBS = frozenset().union(MONSTERS, BLOCKS, PLAYERS)
+NONMOBS = ALL.difference(MOBS)
 DOORS = frozenset(CC1TileCode.Value(s) for s in
                   tuple(
                       f"{c}_DOOR" for c in ("RED", "BLUE", "YELLOW", "GREEN")))

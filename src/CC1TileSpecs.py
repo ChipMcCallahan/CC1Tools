@@ -13,16 +13,16 @@ def of(top, bottom=CC1TileCode.FLOOR):
 
 
 def is_invalid(tspec):
-    return (tspec.top not in CC1TileCodes.ENTITIES and
+    return (tspec.top not in CC1TileCodes.MOBS and
             tspec.bottom != CC1TileCode.FLOOR) or \
            tspec.top in CC1TileCodes.INVALID or \
            tspec.bottom in set().union(CC1TileCodes.INVALID,
-                                       CC1TileCodes.ENTITIES)
+                                       CC1TileCodes.MOBS)
 
 
 def add(tspec, tcode):
-    is_entity = tcode in CC1TileCodes.ENTITIES
-    entity_here = tspec.top in CC1TileCodes.ENTITIES
+    is_entity = tcode in CC1TileCodes.MOBS
+    entity_here = tspec.top in CC1TileCodes.MOBS
     if is_entity:
         if not entity_here:
             tspec.bottom = tspec.top
