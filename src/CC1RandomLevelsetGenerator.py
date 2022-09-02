@@ -18,7 +18,7 @@ class CC1LevelsetWrapper:
     def flatten_args(self, args):
         flat_args = []
         for arg in args:
-            if isinstance(arg, collections.Iterable) and not isinstance(arg, str):
+            if isinstance(arg, collections.abc.Iterable) and not isinstance(arg, str):
                 flat_args.extend(arg)
             else:
                 flat_args.append(arg)
