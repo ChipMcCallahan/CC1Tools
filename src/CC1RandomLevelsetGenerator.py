@@ -1,7 +1,6 @@
 import collections
 import random
-from .CC1LevelsetReader import CC1LevelsetReader
-from .CC1LevelsetWriter import CC1LevelsetWriter
+from . import CC1LevelsetReader, CC1LevelsetWriter, CC1Levelset
 
 class CC1LevelsetWrapper:
     def __init__(self, levelset):
@@ -101,14 +100,14 @@ class CC1RandomLevelsetGenerator:
         return sum([len(wrapper.eligible) for wrapper in self.pool.values()])
     
     def generate_random_set(self, n_levels, filename=None):
-        combined_set = cc1_levelset_proto.cc1_levelset_pb2.Levelset()
+        combined_set = Levelset()
         for wrapper in self.pool.values():
             for level_num in wrapper.eligible:
                 combined_set.levels.append(wrapper.get_level(level_num))
         
         picks = random.sample(range(len(combined_set.levels)), n_levels)
         
-        random_set = cc1_levelset_proto.cc1_levelset_pb2.Levelset()
+        random_set = Levelset()
         for i, pick in enumerate(picks):
             level = combined_set.levels[pick]
             level.number = i + 1
