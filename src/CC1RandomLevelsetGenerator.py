@@ -1,6 +1,6 @@
 import collections
 import random
-from . import CC1LevelsetReader, CC1LevelsetWriter, CC1Levelset
+from . import CC1LevelsetReader, CC1LevelsetWriter, Levelset
 
 class CC1LevelsetWrapper:
     def __init__(self, levelset):
