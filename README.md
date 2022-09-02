@@ -1,5 +1,5 @@
 # CC1Tools
-Assorted tools for working with and displaying [Chip's Challenge](https://wiki.bitbusters.club/Main_Page) levels in [DAT file format](http://www.seasip.info/ccfile.html). Some of the important components are described below.
+Assorted tools for working with and displaying [Chip's Challenge](https://wiki.bitbusters.club/Main_Page) levelsets and levels in [DAT file format](http://www.seasip.info/ccfile.html). Some of the important components are described below.
 
 ### Protocol Buffers and Utilities
 [Levelset](https://github.com/ChipMcCallahan/CC1Tools/blob/4516095d514873ec3cccff0c1cd7564c5a163c8c/src/cc1_levelset.proto#L10) class: A protocol buffer representing a CC1 Levelset. Consists of a name, an array of levels, and an experimental array of Story elements. It exists because it is much easier to work with than DAT files, and can be easily written back to DAT format using the CC1LevelsetWriter.
