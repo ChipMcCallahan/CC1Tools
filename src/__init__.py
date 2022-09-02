@@ -6,3 +6,4 @@ from .CC1LevelsetImporter import *
 from .CC1LevelsetReader import *
 from .CC1LevelsetWriter import *
 from .CC1RandomLevelsetGenerator import *
+from .CC1LevelImager import *
